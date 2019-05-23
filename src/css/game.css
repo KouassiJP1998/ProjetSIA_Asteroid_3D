@@ -1,0 +1,279 @@
+
+#hurt {
+  background-color: red;
+  display: none;
+  left: 0;
+  opacity: 0.15;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 1002;
+}
+
+#flash {
+  background-color: white;
+  display: none;
+  left: 0;
+  opacity: 0.15;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 1002;
+}
+
+
+.hud {
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  border-radius: 10% 30%;
+  position: absolute;
+  top: 0;
+  left: -150px;
+  bottom: 0;
+  right: 0;
+  padding: 35px;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+.flashCount {
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  border-radius: 10% 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 70px;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+.restart {
+  text-align: center;
+  font-size: 5em;
+  text-decoration: none;
+  border-radius: 10% 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 200px;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+  font-weight: bold;
+  letter-spacing: -2px;
+  word-spacing: 1.6px;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg,
+                    #7794ff,
+                    #44107A,
+                    #FF1361,
+                    #FFF800);
+  animation: .8s shake infinite alternate;
+}
+
+.continuation {
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  border-radius: 10% 30%;
+  position: fixed;
+  top: 0;
+  left: -700px;
+  bottom: 0;
+  right: 0;
+  padding: 35px;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+.hudLevel{
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  border-radius: 10% 30%;
+  position: absolute;
+  top: 0;
+  left: 150px;
+  bottom: 0;
+  right: 0;
+  padding: 35px;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+.info {
+  text-align: center;
+  font-size: 0.8em;
+  text-decoration: none;
+  background-color: rgba(173, 150, 10, 0.3);
+  border-radius: 5% 40%;
+  position: absolute;
+  left: 200px;
+  padding: 35px;
+  bottom: 40;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+.invincible {
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  border-radius: 10% 30%;
+  position: fixed;
+  top: 0;
+  left: -700px;
+  bottom: 0;
+  right: 0;
+  padding: 70px;
+  color: #f5fcff;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+}
+
+
+.help {
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    font-size: 1.4em;
+    background-color: rgba(173, 150, 10, 0.6);
+    width: 480px;
+    min-width: 450px;
+    height: 130px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    color: #f5fcff;
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+}
+
+
+
+
+.link{
+text-shadow:4px 4px 0px #FFF,
+7px 7px 0px #877667;color:#594E44;
+background-color:#FFF;
+}
+
+html, body {
+
+}
+
+
+#c {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        background-image: url("http://synian.files.wordpress.com/2013/05/earth-snoopy_sophie-32847147-1920-1080.jpg");
+        background-size: cover;
+    }
+
+#loading-screen {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

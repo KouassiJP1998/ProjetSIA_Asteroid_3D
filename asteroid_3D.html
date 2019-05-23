@@ -1,0 +1,80 @@
+<html>
+
+	<head>
+		<title>Asteroid 3D</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="src/css/reset.css">
+		<link rel="stylesheet" href="src/css/game.css">
+	</head>
+
+	<body>
+		<canvas id="c"></canvas>
+
+
+		<script src="src/lib/threex/THREEx.FullScreen.js"></script>
+		<script src="src/lib/threex/THREEx.screenshot.js"></script>
+		<script src="src/lib/stats.min.js"></script>
+		<script src="src/lib/three.js"></script>
+        <script src="src/lib/keydrown.js"></script>
+		<script src="src/lib/jquery-2.0.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+		<script src="https://threejs.org/examples/js/loaders/ColladaLoader.js"></script>
+		<script src="src/lib/dat.gui.js"></script>
+
+		<script src="src/js/helpers.js"></script>
+		<script src="src/js/player.js"></script>
+		<script src="src/js/bullet.js"></script>
+		<script src="src/js/asteroid.js"></script>
+		<script src="src/js/keys.js"></script>
+		<script src="src/js/game.js"></script>
+		<script src="src/js/vie.js"></script>
+		<script src="src/js/keyboard.js"></script>
+		<script src="src/js/restart.js"></script>
+		<script src="src/js/flash.js"></script>
+
+		<div class="info" id="info">
+			<i><font color="teal">p</font></i> screenshot<span> &otimes;</span>
+			<i><font color="teal">f</font></i> fullscreen<span> &otimes;</span>
+			<i><font color="teal">h</font></i> help<span> &otimes;</span>
+			<i><font color="teal">k</font></i> kill all<span> &otimes;</span>
+		</div>
+
+		<div id="restartgame" class="restart" style="visibility:hidden;">
+			<i><font color="teal">GAME OVER <br/> PRESS ENTER TO PLAY AGAIN</font></i>
+		</div>
+
+		<div id="continuation" class="continuation" style="visibility:hidden;">
+				CONTINUATION MODE
+		</div>
+
+		<div id="hud" class="hud" style="visibility:visible;"></div>
+		<div id="hudLevel" class="hudLevel" style="visibility:visible;"></div>
+		<div id="flashCount" class="flashCount" style="visibility:visible;"></div>
+
+
+		<div id="helpgame" class="help" style="visibility:hidden;">
+			<i><font color="teal">0</font></i> default camera<span> &otimes;</span>
+			<i><font color="teal">1</font></i> player camera<br><br>
+			<i><font color="teal">2</font></i> continuation mode<span> &otimes;</span>
+			<i><font color="teal">i</font></i> invincible mode<br><br>
+			<i><font color="teal">j</font></i> next joker
+		</div>
+		<div id="invincible" class="invincible" style="visibility:hidden;">
+			<i><font color="white">invincible mode</font></i>
+		</div>
+
+		<section id="loading-screen">
+			<div id="loader"></div>
+		</section>
+		<script type="text/javascript">
+			
+			// Initialisation du jeu Asteroid 3D
+			init();
+			animate();
+		</script>
+
+	</body>
+
+</html>
